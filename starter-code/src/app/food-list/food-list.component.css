@@ -15,3 +15,9 @@ img {
 h1 {
   margin: 50px;
 }
+
+strong {
+  color: #0099CC;
+  text-transform: uppercase;
+  font-weight: bold;
+}
