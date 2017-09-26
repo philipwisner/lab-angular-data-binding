@@ -14,4 +14,5 @@ export class FoodListComponent implements OnInit {
     this.foods = foods;
   }
 
+
 }
