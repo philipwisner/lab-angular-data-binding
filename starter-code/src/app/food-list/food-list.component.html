@@ -1,6 +1,6 @@
 <div class="food-search">
   <label for="food-search">Search Foods: </label><br />
-  <input type="search"><br />
+  <input type="text" [(ngModel)]="searchTerms"><br />
   <button>SEARCH</button>
 </div>
 
@@ -13,8 +13,4 @@
     <p><strong>Quantity: </strong>{{food.quantity}}</p>
     <button (click)="addToToday()">Add to Today</button>
   </div>
-</div>
-
-<div>
-  {{todayFood[0]}}
 </div>

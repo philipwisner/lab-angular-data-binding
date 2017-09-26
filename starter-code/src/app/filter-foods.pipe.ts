@@ -7,8 +7,10 @@ export class FilterFoodsPipe implements PipeTransform {
 
   transform(value: any, searchTerms: string): any {
     return value.filter((item)=> {
-      return item.name;
+      return item.name === searchTerms;
     });
   }
 
 }
+
+//filter by input name
