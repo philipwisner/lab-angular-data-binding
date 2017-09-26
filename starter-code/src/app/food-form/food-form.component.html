@@ -1,4 +1,4 @@
-<div class="food-form">
+<div class="food-form" *ngIf="showAdd">
   <h1>Add a New Food</h1>
   <div>
     <label for="food-name">Name: </label><br />
@@ -17,5 +17,5 @@
     <input type="text" [(ngModel)]="newFood.image">
   </div>
 
-  <button (click)="addFood()">Submit New Food</button>
+  <button (click)="addFood(); hideFood()">Submit New Food</button>
 </div>

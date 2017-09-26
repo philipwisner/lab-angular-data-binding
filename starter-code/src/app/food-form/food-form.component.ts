@@ -9,6 +9,8 @@ import foods from '../foods';
 export class FoodFormComponent implements OnInit {
   foods: Object[];
   newFood: Object = {};
+  showAdd: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
@@ -18,6 +20,10 @@ export class FoodFormComponent implements OnInit {
   addFood() {
     this.foods.push(this.newFood);
     this.newFood = {};
+  }
+
+  hideFood() {
+    this.showAdd = false;
   }
 
 }

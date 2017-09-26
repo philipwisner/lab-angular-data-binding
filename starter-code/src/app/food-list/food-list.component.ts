@@ -8,11 +8,15 @@ import foods from '../foods';
 })
 export class FoodListComponent implements OnInit {
   foods: Object[];
+  todayFood: Object = {};
   constructor() { }
 
   ngOnInit() {
     this.foods = foods;
   }
 
+  addToToday() {
+    this.foods.push(this.todayFood);
+  }
 
 }
