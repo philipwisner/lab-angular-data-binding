@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-todays-food',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todays-food.component.css']
 })
 export class TodaysFoodComponent implements OnInit {
+  @Input() todaysFoods: Object[];
 
   constructor() { }
 

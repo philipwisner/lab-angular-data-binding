@@ -20,5 +20,3 @@ export class FilterFoodsPipe implements PipeTransform {
   }
 
 }
-
-//filter by input name
