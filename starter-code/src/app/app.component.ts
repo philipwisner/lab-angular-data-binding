@@ -8,13 +8,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Food App';
   show: boolean = false;
-  showFoods: boolean = false;
+  showFoods: boolean = true;
 
   showForm(show: boolean) {
-    this.show = true;
+    if (this.show === false) {
+      this.show = true;
+    } else {
+      this.show = false;
+    }
   }
 
   showFoodsList(showFoods: boolean) {
-    this.showFoods = true;
+    if (this.showFoods === false) {
+      this.showFoods = true;
+    } else {
+      this.showFoods = false;
+    }
   }
 }
