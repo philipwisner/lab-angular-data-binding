@@ -1,14 +1,22 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filterFoods'
+  name: 'filterFoods',
+  pure: false
 })
-export class FilterFoodsPipe implements PipeTransform {
 
-  transform(value: any, searchTerms: string): any {
-    return value.filter((item)=> {
-      return item.name === searchTerms;
-    });
+export class FilterFoodsPipe implements PipeTransform {
+  transform(items: any[], field: string, value: string): any[] {
+    if (!items) {
+     return [];
+   }
+
+   if (!value) {
+     return items;
+   }
+
+   const myPattern = new RegExp(value, 'i');
+   return items.filter(it => it[field].match(myPattern));
   }
 
 }
