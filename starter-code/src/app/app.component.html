@@ -15,4 +15,4 @@
   <input type="text" [(ngModel)]="searchTerms" (ngModelChange)="updateFilteredFoodList()"><br />
 </div>
 
-<app-food-list *ngIf="showFoods" [foods]="foods" (onNewFood)="onNewFood($event)"></app-food-list>
+<app-food-list *ngIf="showFoods" [foods]="filteredFoods" (onNewFood)="onNewFood($event)"></app-food-list>

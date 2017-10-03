@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.foods = foods;
-    this.updateFilteredFoodList();
+    this.updateFilteredFoodList;
   }
 
   showForm(show: boolean) {
@@ -47,11 +47,11 @@ export class AppComponent implements OnInit {
 
   handleNewFood(food) {
     this.foods.push(food);
-    this.updateFilteredFoodList();
+    this.updateFilteredFoodList;
   }
 
   updateFilteredFoodList() {
-    this.filteredFoods = this.foods.filter((food:Food) => {
+    this.filteredFoods = this.foods.filter((food: Food) => {
       return !this.searchTerms || food.name === this.searchTerms;
     })
   }
